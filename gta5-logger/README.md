@@ -39,7 +39,7 @@ The mod depends on two external components that must be obtained from their offi
   - `ScriptHookVDotNet2.dll`
   - `ScriptHookVDotNet3.dll`
   - *(optional, recommended)* `LICENSE.txt`, `README.txt`, `ScriptHookVDotNet2.xml`, `ScriptHookVDotNet3.xml`
-- `ScriptHookVDotNet.ini` is already present in `mod/prerequisites/` (tweak as needed).
+- `ScriptHookVDotNet.ini` and `args.txt`are already present in `mod/prerequisites/`.
 
 ### 2) ScriptHookV (Alexander Blade)
 
@@ -61,8 +61,8 @@ mod/prerequisites/
 ├─ ScriptHookV.dll
 ├─ dinput8.dll
 ├─ xinput1_4.dll
-├─ LICENSE.txt      # from SHVDN release (optional, recommended)
-└─ README.txt       # from SHVDN release (optional)
+├─ args.txt
+└─ LICENSE.txt      # from SHVDN release (optional, recommended)
 ```
 
 ---
@@ -150,4 +150,4 @@ The exact schema of your pipeline may extend this set (see the dataset repositor
 
 - ScriptHookVDotNet is distributed under the **zlib** license; if you include its binaries, keep `LICENSE.txt` alongside.
 - ScriptHookV is a third‑party binary distributed from the official site above.
-- The GTA V logging mod included here was originally authored by [**<Eduard Sariiev>**](https://github.com/eduard-sariiev) and is used with attribution.
+- The GTA V logging mod included here was originally authored by [Eduard Sariiev](https://github.com/eduard-sariiev) and is used with attribution.
