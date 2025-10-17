@@ -151,4 +151,3 @@ The exact schema of your pipeline may extend this set (see the dataset repositor
 - ScriptHookVDotNet is distributed under the **zlib** license; if you include its binaries, keep `LICENSE.txt` alongside.
 - ScriptHookV is a third‑party binary distributed from the official site above.
 - The GTA V logging mod included here was originally authored by [Eduard Sariiev](https://github.com/eduard-sariiev) and is used with attribution.
--  **Funding:** Co-funded by the **European Regional Development Fund (ERDF/EFRE)** and the **State of Saxony-Anhalt** under the programme *Sachsen-Anhalt WISSENSCHAFT Forschung und Innovation (EFRE) 2021–2027*, project **ReSeDiUm** (grant no. **ZS/2023/12/182669**).
