@@ -18,6 +18,7 @@ This repository publishes a **dataset collected over ~30 hours of gameplay** and
 │  └─ graph/                                                # road graph from game path data
 │     ├─ nodes.csv
 │     └─ links.csv
+├─ notebooks/                                               # analysis notebooks (see below)
 └─ gta5-logger/                                             # mod and receiver + install guide
    ├─ README.md          # detailed setup/run instructions
    ├─ mod/               # C# (ScriptHookVDotNet) sources
@@ -51,14 +52,27 @@ This repository publishes a **dataset collected over ~30 hours of gameplay** and
 | `pos`            | world position as `x,y,z` (comma-separated string) |
 | `vehicle`        | vehicle class/model if in vehicle; empty otherwise |
 | `subtitles_text` | subtitle text; empty if no spoken line |
-| `speaker`        | speaker label/name |
+| `speaker`        | normalized speaker label/name |
 | `soundfile`      | soundbank identifier/path (if available) |
 
-**Format:** UTF-8, semicolumn-separated, header row present.
+**Format:** UTF-8, comma-separated, header row present.
 
 ### Daily splits (by real date)
 Files `gtanarrativetraj_events_realdate-YYYY-MM-DD_part-PP.csv` contain the **same columns** as the full log, split by **real recording date** (and by `part-PP` when needed).  
 `MANIFEST.csv` lists files, dates, parts, and record counts (and, when available, start/end timestamps).
+
+---
+
+## Notebooks (`notebooks/`)
+
+Analysis notebooks are provided under `notebooks/`:
+
+- `01_minimal_maps.ipynb` — minimal road‑graph plots (graph, nodes by type, links by class).  
+- `02_trip_segmentation.ipynb` — trip segmentation and per‑trip aggregates; writes `gtanarrativetraj_trips_summary.csv`.  
+- `03_text_analysis.ipynb` — basic text statistics and speaker distribution; writes `text_stats_summary.csv`, `top_speakers.csv`.
+
+> Inputs: `data/dataset/gtanarrativetraj_full_events.csv`, `data/graph/nodes.csv`, `data/graph/links.csv`.  
+> Outputs: CSV artifacts are written to `data/dataset/` (paths can be adjusted inside the notebooks).
 
 ---
 
@@ -70,6 +84,8 @@ The **`gta5-logger/`** directory contains:
 - **`gta5-logger/README.md`** — the **authoritative guide** for installation and running
   (requirements, ScriptHookV/ScriptHookVDotNet setup, building the DLL, starting the receiver, CLI options).
 
+> Default output path for the receiver:  
+> `data/dataset/gtanarrativetraj_full_events.csv` (can be changed via `--out`).
 
 ---
 
@@ -79,6 +95,6 @@ The **`gta5-logger/`** directory contains:
 - Parse `pos` into three numeric columns (`x`, `y`, `z`) for downstream analysis.
 
 ---
-## Funding
-- Co-funded by the **European Regional Development Fund (ERDF/EFRE)** and the **State of Saxony-Anhalt** under the programme *Sachsen-Anhalt WISSENSCHAFT Forschung und Innovation (EFRE) 2021–2027*, project **ReSeDiUm** (grant no. **ZS/2023/12/182669**).
 
+## Acknowledgments
+Co-funded by the **European Regional Development Fund (ERDF/EFRE)** and the **State of Saxony-Anhalt** under the programme *Sachsen-Anhalt WISSENSCHAFT Forschung und Innovation (EFRE) 2021–2027*, project **ReSeDiUm** (grant no. **ZS/2023/12/182669**).
