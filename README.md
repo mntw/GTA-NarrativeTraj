@@ -77,3 +77,8 @@ The **`gta5-logger/`** directory contains:
 - Third-party binaries (ScriptHookV / ScriptHookVDotNet) are **not** redistributed here; follow the instructions in [`gta5-logger/README.md`](gta5-logger/README.md).  
 - Fields `subtitles_text`, `speaker`, `soundfile` may be empty for non-spoken events.  
 - Parse `pos` into three numeric columns (`x`, `y`, `z`) for downstream analysis.
+
+---
+## Funding
+- Co-funded by the **European Regional Development Fund (ERDF/EFRE)** and the **State of Saxony-Anhalt** under the programme *Sachsen-Anhalt WISSENSCHAFT Forschung und Innovation (EFRE) 2021–2027*, project **ReSeDiUm** (grant no. **ZS/2023/12/182669**).
+
